@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
+  },
+  anon: {
+    marginTop: 15
   }
 });
 
@@ -39,7 +42,7 @@ const firebaseRef = firebase.initializeApp(config);
 export default class App extends Component {
   _authLogin(error, result) {
     if (error) {
-      alert("Login fail without error: " + error);
+      alert("Login error: " + result.error);
     } else if (result.isCancelled) {
       alert("Login was cancelled.");
     } else {
@@ -62,10 +65,27 @@ export default class App extends Component {
     }
   }
 
+  _anonLogin() {
+    firebase
+      .auth()
+      .signInAnonymously()
+      .then(
+        result => {
+          alert("Login success!");
+        },
+        error => {
+          alert(`${error.message} | Code: ${error.message}`);
+        }
+      );
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <LoginButton onLoginFinished={this._authLogin} />
+        <TouchableOpacity style={styles.anon} onPress={this._anonLogin}>
+          <Text>No Thanks</Text>
+        </TouchableOpacity>
       </View>
     );
   }
