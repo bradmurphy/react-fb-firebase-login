@@ -4,13 +4,54 @@
             "outputFile": "/Users/murph/Documents/projects/react-native-fb-firebase-login/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.22.1.aar/ce32d9f9a8bed5c378abb6229669cd9a/res/values-kn/values-kn.xml",
+                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/de473f99e77edd9416be6f7359226f01/res/values-kn/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1846",
+                        "endColumns": "204",
+                        "endOffsets": "2046"
+                    }
+                },
+                {
+                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9363955aa69b0e3430a65eca8cab0503/res/values-kn/values-kn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "22",
+                        "startColumns": "4",
+                        "startOffsets": "2114",
+                        "endColumns": "100",
+                        "endOffsets": "2210"
+                    }
+                },
+                {
+                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.22.1.aar/dc5d02873566496ac91fd6fc5033730d/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
                         "startOffsets": "55,239,366,487,580,655,729,795,870,946,1046,1146,1223,1300,1395,1508,1574,1644,1796",
                         "endColumns": "183,126,120,92,74,73,65,74,75,99,99,76,76,94,112,65,69,151,62",
                         "endOffsets": "234,361,482,575,650,724,790,865,941,1041,1141,1218,1295,1390,1503,1569,1639,1791,1854"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,289,416,537,630,705,779,845,920,996,1096,1196,1273,1350,1445,1558,1624,1694,2051",
+                        "endColumns": "183,126,120,92,74,73,65,74,75,99,99,76,76,94,112,65,69,151,62",
+                        "endOffsets": "284,411,532,625,700,774,840,915,991,1091,1191,1268,1345,1440,1553,1619,1689,1841,2109"
                     }
                 }
             ]

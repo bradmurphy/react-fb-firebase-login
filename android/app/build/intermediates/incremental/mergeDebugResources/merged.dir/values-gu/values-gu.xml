@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string name="com_facebook_device_auth_instructions">&lt;b>facebook.com/device&lt;/b> ની મુલાકાત લો અને ઉપર બતાવ્યા પ્રમાણે કોડ દાખલ કરો.</string>
     <string name="com_facebook_image_download_unknown_error">છબી ડાઉનલોડ કરતી વખતે અનપેક્ષિત ભૂલ આવી.</string>
     <string name="com_facebook_internet_permission_error_message">WebView લૉગિન માટે ઇન્ટરનેટ પરવાગની આવશ્યક છે</string>
@@ -22,5 +22,7 @@
     <string name="com_facebook_smart_login_confirmation_cancel">તમે નહિ?</string>
     <string name="com_facebook_smart_login_confirmation_title">લૉગિનની પુષ્ટિ કરો</string>
     <string name="com_facebook_tooltip_default">તમે નિયંત્રણ કરો છો - તમે એપ્લિકેશન્સ સાથે કઈ માહિતી શેર કરવા માંગો છો તે પસંદ કરો.</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ને Google Play સેવાઓમાં મુશ્કેલી આવી રહી છે. કૃપા કરીને ફરી પ્રયાસ કરો."</string>
     <string name="messenger_send_button_text">મોકલો</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

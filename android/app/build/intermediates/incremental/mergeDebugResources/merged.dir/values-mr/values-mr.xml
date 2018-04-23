@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string name="com_facebook_device_auth_instructions">&lt;b>facebook.com/device&lt;/b> वर भेट द्या आणि वर दर्शवलेला कोड प्रविष्ट करा.</string>
     <string name="com_facebook_image_download_unknown_error">प्रतिमा डाउनलोड करताना अनपेक्षित त्रुटी.</string>
     <string name="com_facebook_internet_permission_error_message">वेबदृश्य लॉग इन आवश्यकता इंटरनेट परवानगी</string>
@@ -22,5 +22,7 @@
     <string name="com_facebook_smart_login_confirmation_cancel">तुम्ही नाही?</string>
     <string name="com_facebook_smart_login_confirmation_title">लॉग इन पुष्टी करा</string>
     <string name="com_facebook_tooltip_default">तुम्ही नियंत्रणात आहात - तुम्ही कोणती माहिती अॅपसह सामायिक करू इच्छिता ते निवडा.</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ला Google Play सेवांमध्ये समस्या येत आहे. कृपया पुन्हा प्रयत्न करा."</string>
     <string name="messenger_send_button_text">पाठवा</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

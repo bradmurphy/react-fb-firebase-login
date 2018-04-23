@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Apr 23 13:02:09 EDT 2018
+#Mon Apr 23 15:17:30 EDT 2018
 17.baseType=DIRECTORY
 4.path=lib/armeabi-v7a/libjsc.so
 25.base=/Users/murph/Documents/projects/react-native-fb-firebase-login/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

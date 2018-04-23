@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "790541109275",
+    "firebase_url": "https://testlogin-d2e2a.firebaseio.com",
+    "project_id": "testlogin-d2e2a",
+    "storage_bucket": "testlogin-d2e2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790541109275:android:0f3850db1eb931a6",
+        "android_client_info": {
+          "package_name": "com.facebookfirebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790541109275-9gaust25t3sqr647q1p196t94rlu62af.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb-U3-B9SpylMr5MdB-b5-1GPG6mt6l_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

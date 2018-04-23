@@ -4,13 +4,30 @@
             "outputFile": "/Users/murph/Documents/projects/react-native-fb-firebase-login/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.0.aar/d9a69034b3a8c115c261b4d5979d64bb/res/values-v24/values-v24.xml",
+                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.0.aar/81f2a967c4809bd2d6621d2620d02330/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,124,188,257",
                         "endColumns": "68,63,68,69",
                         "endOffsets": "119,183,252,322"
+                    }
+                },
+                {
+                    "source": "/Users/murph/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/89e61c6fec85427e649aa12986f626d9/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "327,393,454,520",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "388,449,515,582"
                     }
                 }
             ]
