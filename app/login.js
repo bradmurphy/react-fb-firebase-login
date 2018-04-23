@@ -28,6 +28,12 @@ const styles = StyleSheet.create({
   },
   anon: {
     marginTop: 15
+  },
+  hide: {
+    display: "none"
+  },
+  show: {
+    display: "flex"
   }
 });
 
@@ -40,11 +46,12 @@ let config = {
 const firebaseRef = firebase.initializeApp(config);
 
 export default class App extends Component {
-  _authLogin(error, result) {
+  state = { loggedIn: false };
+  _authLogin = (error, result) => {
     if (error) {
-      alert("Login error: " + result.error);
+      console.log("Login error: " + result.error);
     } else if (result.isCancelled) {
-      alert("Login was cancelled.");
+      console.log("Login was cancelled.");
     } else {
       AccessToken.getCurrentAccessToken().then(accessTokenData => {
         const credential = firebase.auth.FacebookAuthProvider.credential(
@@ -55,37 +62,47 @@ export default class App extends Component {
           .signInWithCredential(credential)
           .then(
             result => {
-              alert("Login success!");
+              console.log("Login success!");
             },
             error => {
-              alert("Login error: " + error);
+              console.log("Login error: " + error);
             }
           );
       });
+      this.setState({ loggedIn: !this.state.loggedIn });
     }
-  }
+  };
 
-  _anonLogin() {
+  _anonLogin = () => {
     firebase
       .auth()
       .signInAnonymously()
       .then(
         result => {
-          alert("Login success!");
+          console.log("Login success!");
         },
         error => {
-          alert(`${error.message} | Code: ${error.message}`);
+          console.log(`${error.message} | Code: ${error.message}`);
         }
       );
-  }
+    this.setState({ loggedIn: !this.state.loggedIn });
+  };
 
   render() {
+    const { loggedIn } = this.state;
+    const fbButton = [styles.fb, loggedIn && styles.hide];
+    const anonButton = [styles.anon, loggedIn && styles.hide];
+    const logText = [styles.hide, loggedIn && styles.show];
+
     return (
       <View style={styles.container}>
-        <LoginButton onLoginFinished={this._authLogin} />
-        <TouchableOpacity style={styles.anon} onPress={this._anonLogin}>
+        <View style={fbButton}>
+          <LoginButton onLoginFinished={this._authLogin} />
+        </View>
+        <TouchableOpacity style={anonButton} onPress={this._anonLogin}>
           <Text>No Thanks</Text>
         </TouchableOpacity>
+        <Text style={logText}>You've been logged in!</Text>
       </View>
     );
   }
