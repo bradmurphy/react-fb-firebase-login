@@ -32,14 +32,10 @@ export default class Login extends Component {
       firebase.auth().onAuthStateChanged(user => {
         // Check for user
         if (user) {
-          this.setState({ anon: !this.state.anon });
-
-          // Check if user has an email, letting us know it's a facebook account.
-          if (user.email) {
-            this.setState({ fb: !this.state.fb, anon: !this.state.anon });
-          }
-
-          // Resolve user.
+          // Check if user has an email, letting us know it's a facebook account, resolve user.
+          user.email === null
+            ? this.setState({ anon: true })
+            : this.setState({ fb: true });
           resolve(user);
         } else {
           // Create anonymous account.
@@ -74,7 +70,7 @@ export default class Login extends Component {
               .currentUser.linkWithCredential(credential)
               .then(
                 user => {
-                  this.setState({ anon: !this.state.anon, fb: !this.state.fb });
+                  this.setState({ anon: false, fb: true });
                 },
                 error => {
                   alert(`Error upgrading anonymous account: ${error}`);
@@ -96,7 +92,7 @@ export default class Login extends Component {
       .signInAnonymously()
       .then(
         result => {
-          this.setState({ anon: !this.state.anon });
+          this.setState({ anon: true });
         },
         error => {
           alert(`Error Message: ${error.message} | Error Code: ${error.code}`);
@@ -105,21 +101,21 @@ export default class Login extends Component {
   };
 
   render() {
-    const { anon, fb, appState } = this.state;
-    const anonymous = anon ? "true" : "false";
-    const facebook = fb ? "true" : "false";
+    const { anon, fb } = this.state;
+    const status = fb
+      ? "Your account has been linked to Facebook."
+      : "Currently you have an anonymous Firebase account.";
+    const buttonStyles = [styles.button, fb && styles.connected];
     const connectText = [styles.text, fb && styles.hide];
     const connectedText = [styles.text, !fb && styles.hide];
 
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button} onPress={this._fbLink}>
+        <TouchableOpacity style={buttonStyles} onPress={this._fbLink}>
           <Text style={connectText}>Connect w/ Facebook</Text>
           <Text style={connectedText}>Connected to Facebook</Text>
         </TouchableOpacity>
-        <Text style={styles.status}>
-          Anonymous: {anonymous} | Facebook: {facebook}
-        </Text>
+        <Text style={styles.status}>{status}</Text>
       </View>
     );
   }
@@ -137,6 +133,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: "#3b5998",
     borderRadius: 4
+  },
+  connected: {
+    backgroundColor: "#8B9DC3"
   },
   text: {
     fontSize: 20,
