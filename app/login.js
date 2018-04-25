@@ -82,6 +82,9 @@ export default class Login extends Component {
               );
           });
         }
+      },
+      error => {
+        alert(`Error Message: ${error.message} | Error Code: ${error.code}`);
       }
     );
   };
