@@ -82,9 +82,6 @@ export default class Login extends Component {
               );
           });
         }
-      },
-      error => {
-        alert(`Error Message: ${error.message} | Error Code: ${error.code}`);
       }
     );
   };
@@ -99,7 +96,7 @@ export default class Login extends Component {
           this.setState({ anon: true });
         },
         error => {
-          alert(`Error Message: ${error.message} | Error Code: ${error.code}`);
+          alert(`Error creating anonymous account: ${error}`);
         }
       );
   };
