@@ -25,34 +25,38 @@ export default class Login extends Component {
   // Initialize state booleans for facebook and anonymous accounts.
   state = { fb: false, anon: false };
 
+  // Once component mounts, initiate authorization or account creation.
+  componentDidMount() {
+    this._initAuth();
+  }
+
   // When the component mounts, check to see if user has an account,
   // facebook account or if an anonymous account needs to be created.
-  componentDidMount() {
+  _initAuth = () => {
     return new Promise((resolve, reject) => {
       firebase.auth().onAuthStateChanged(user => {
         // Check for user
         if (user) {
-          // Check if user has an email, letting us know it's a facebook account, resolve user.
-          user.email === null
+          // Check if user has provider data, letting us know it's a facebook account, resolve user.
+          user.providerData.length === 0
             ? this.setState({ anon: true })
             : this.setState({ fb: true });
           resolve(user);
         } else {
           // Create anonymous account.
-          this._anonLogin();
+          this._anonAuth();
         }
       });
     });
-  }
+  };
 
+  // If facebook account doesn't exist, link facebook account to anonymous account.
   _fbLink = () => {
-    if (this.state.fb === false) {
-      this._authLogin();
-    }
+    this.state.fb === false ? this._fbAuth() : "";
   };
 
   // Connect anonymous account to Facebook Account, replacing the anonymous account.
-  _authLogin = () => {
+  _fbAuth = () => {
     LoginManager.logInWithReadPermissions(["public_profile", "email"]).then(
       result => {
         if (result.isCancelled) {
@@ -86,7 +90,7 @@ export default class Login extends Component {
   };
 
   // Create anonymous account in firebase.
-  _anonLogin = () => {
+  _anonAuth = () => {
     firebase
       .auth()
       .signInAnonymously()
@@ -102,9 +106,11 @@ export default class Login extends Component {
 
   render() {
     const { anon, fb } = this.state;
+
     const status = fb
       ? "Your account has been linked to Facebook."
       : "Currently you have an anonymous Firebase account.";
+
     const buttonStyles = [styles.button, fb && styles.connected];
     const connectText = [styles.text, fb && styles.hide];
     const connectedText = [styles.text, !fb && styles.hide];
