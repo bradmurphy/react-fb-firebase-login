@@ -62,8 +62,8 @@ export default class Login extends Component {
         if (result.isCancelled) {
           alert("Login was cancelled.");
         } else {
-          // Get access token from Facebook to link facebook to anonymous account.
           AccessToken.getCurrentAccessToken().then(accessTokenData => {
+            // Get access token from Facebook to link facebook to anonymous account.
             const credential = firebase.auth.FacebookAuthProvider.credential(
               accessTokenData.accessToken
             );
@@ -73,7 +73,7 @@ export default class Login extends Component {
               .auth()
               .currentUser.linkWithCredential(credential)
               .then(
-                user => {
+                result => {
                   this.setState({ anon: false, fb: true });
                 },
                 error => {

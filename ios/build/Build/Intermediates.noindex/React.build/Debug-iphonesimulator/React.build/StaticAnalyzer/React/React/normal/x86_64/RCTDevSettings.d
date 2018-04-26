@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/murph/Documents/projects/react-native-fb-firebase-login/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h
